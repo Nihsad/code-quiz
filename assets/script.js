@@ -34,13 +34,13 @@ function updateTimer() {
 const questions = [
     {
         question: 'Commonly used data types do NOT include:',
-        options: ['strings', 'booleans', 'alerts', 'numbers'],
-        correctAnswer: 'alerts'
+        options: ['Strings', 'Booleans', 'Alerts', 'Numbers'],
+        correctAnswer: 'Alerts'
     },
     {
         question: 'The condition in an if/else statement is enclosed within:',
-        options: ['quotes', 'curly brackets', 'parenthesis', 'square brackets'],
-        correctAnswer: 'parenthesis'
+        options: ['Quotes', 'Curly Brackets', 'Parenthesis', 'Square Brackets'],
+        correctAnswer: 'Parenthesis'
     }
     {
         question: 'HTML stands for HyperText _______ Language.',
