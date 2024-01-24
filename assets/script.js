@@ -42,7 +42,51 @@ const questions = [
         options: ['quotes', 'curly brackets', 'parenthesis', 'square brackets'],
         correctAnswer: 'parenthesis'
     }
-    // Repeat as needed
+    {
+        question: 'HTML stands for HyperText _______ Language.',
+        options: ['Markup', 'Mark-up', 'Marking', 'Marker'],
+        correctAnswer: 'Markup'
+    },
+	{
+        question: 'Texts that are enclosed on a <title> tag are all displayed in which part of the browser?',
+        options: ['Title Bar', 'Tab', 'Menu Bar', 'Tool Bar'],
+        correctAnswer: 'Title Bar'
+    },
+	{
+        question: 'These are the basic units or building blocks of an HTML file.',
+        options: ['Tag', 'HTTP', 'Value', 'Attribute'],
+        correctAnswer: 'Tag'
+    },	
+	{
+        question: '__________ are used to provide additional information about the tag and go in name-value pairs separated by an equal sign =',
+        options: ['HTTP', 'Value', 'Tag', 'Attribute'],
+        correctAnswer: 'Attribute'
+    },	
+	{
+        question: 'IsNaN() Evaluates And Argument To Determine if Given Value:',
+        options: ['Is Not a Null', 'Is Not a Number', 'Is Not a New Object', 'None Of The Above'],
+        correctAnswer: 'Is Not A Number'
+    },	
+	{
+        question: 'Inside which HTML element do we put the JavaScript?',
+        options: ['Js', 'JavaScript', 'Script', 'Scripting'],
+        correctAnswer: 'Script'
+    },	
+	{
+        question: 'What does CSS stand for?',
+        options: ['Casing Style Sheet', 'Collating Style Sheet', 'Cascading Style Sheet', 'Cascade Style Sheet'],
+        correctAnswer: 'Cascading Style Sheet'
+    },	
+	{
+        question: 'A general single line that appears between the curly braces, whether shorthand or longhand in CSS is known as?',
+        options: ['Declaration', 'Tweening', 'Selector', 'Declaration Block'],
+        correctAnswer: 'Declaration'
+    },	
+	{
+        question: 'Where in an HTML document is the correct place to refer to an external style sheet?',
+        options: ['In the <body> section', 'In the <head> section', 'At the end of the document', 'At the top of the document'],
+        correctAnswer: 'In the <head> section'
+    }
 ];
 
 // Quiz State
