@@ -1,5 +1,5 @@
 /* Colors and Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Gilda+Display&family=Palanquin:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Gilda+Display&family=Palanquin:wght@400;700&display=swap");
 
 :root {
   --bg: rgb(68, 48, 48);
@@ -13,12 +13,12 @@
   --grad-3-75: rgba(240, 210, 144, 0.25);
   --lg: 2.5em;
   --md: 1.25em;
-  --bg-image: url('./images/header-background.jpg');
+  --bg-image: url("./images/header-background.jpg");
 }
 
 body {
   margin: 0;
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   background-color: var(--dark);
 }
 
@@ -43,7 +43,7 @@ body {
 
 .highscores {
   font-weight: bold;
-  font-family: 'Gilda Display', serif;
+  font-family: "Gilda Display", serif;
   letter-spacing: 1px;
 }
 
@@ -73,10 +73,10 @@ body {
 
 #title-container h1 {
   text-transform: uppercase;
-  font-family: 'Gilda Display', serif;
+  font-family: "Gilda Display", serif;
   font-weight: 900;
   font-size: 20px;
-  color: var(--bg)
+  color: var(--bg);
 }
 
 .container {
@@ -100,7 +100,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  background-color: var(--grad-3-75)
+  background-color: var(--grad-3-75);
 }
 
 .option:hover {
