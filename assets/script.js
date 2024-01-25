@@ -40,7 +40,8 @@ const questions = [{
         question: 'The condition in an if/else statement is enclosed within:',
         options: ['Quotes', 'Curly Brackets', 'Parenthesis', 'Square Brackets'],
         correctAnswer: 'Parenthesis'
-    } {
+    },
+    {
         question: 'HTML stands for HyperText _______ Language.',
         options: ['Markup', 'Mark-up', 'Marking', 'Marker'],
         correctAnswer: 'Markup'
