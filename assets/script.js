@@ -10,29 +10,28 @@ function startQuiz() {
 }
 
 function updateTimer() {
-    if(!quizCompleted) {
+    if (!quizCompleted) {
         const minutes = Math.floor(countdownTimeInSeconds / 60);
         const seconds = countdownTimeInSeconds % 60;
 
-    // display formatted time in timer element
-    timerElement.textContent = `Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        // display formatted time in timer element
+        timerElement.textContent = `Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
-    // decrease countdown time
-    countdownTimeInSeconds--;
+        // decrease countdown time
+        countdownTimeInSeconds--;
 
-    // check if countdown has reached zero
-    if (countdownTimeInSeconds < 0) {
-        clearInterval(timerInterval);
-        timerElement.textContent = 'Time is up!';
-        // Add any additional actions you want to perform when the time is up
-        submitScore(); // For example, submitting the score when time is up
+        // check if countdown has reached zero
+        if (countdownTimeInSeconds < 0) {
+            clearInterval(timerInterval);
+            timerElement.textContent = 'Time is up!';
+            // Add any additional actions you want to perform when the time is up
+            submitScore(); // For example, submitting the score when time is up
         }
     }
 }
 
 // Questions Array
-const questions = [
-    {
+const questions = [{
         question: 'Commonly used data types do NOT include:',
         options: ['Strings', 'Booleans', 'Alerts', 'Numbers'],
         correctAnswer: 'Alerts'
@@ -41,48 +40,47 @@ const questions = [
         question: 'The condition in an if/else statement is enclosed within:',
         options: ['Quotes', 'Curly Brackets', 'Parenthesis', 'Square Brackets'],
         correctAnswer: 'Parenthesis'
-    }
-    {
+    } {
         question: 'HTML stands for HyperText _______ Language.',
         options: ['Markup', 'Mark-up', 'Marking', 'Marker'],
         correctAnswer: 'Markup'
     },
-	{
+    {
         question: 'Texts that are enclosed on a <title> tag are all displayed in which part of the browser?',
         options: ['Title Bar', 'Tab', 'Menu Bar', 'Tool Bar'],
         correctAnswer: 'Title Bar'
     },
-	{
+    {
         question: 'These are the basic units or building blocks of an HTML file.',
         options: ['Tag', 'HTTP', 'Value', 'Attribute'],
         correctAnswer: 'Tag'
-    },	
-	{
+    },
+    {
         question: '__________ are used to provide additional information about the tag and go in name-value pairs separated by an equal sign =',
         options: ['HTTP', 'Value', 'Tag', 'Attribute'],
         correctAnswer: 'Attribute'
-    },	
-	{
+    },
+    {
         question: 'IsNaN() Evaluates And Argument To Determine if Given Value:',
         options: ['Is Not a Null', 'Is Not a Number', 'Is Not a New Object', 'None Of The Above'],
         correctAnswer: 'Is Not A Number'
-    },	
-	{
+    },
+    {
         question: 'Inside which HTML element do we put the JavaScript?',
         options: ['Js', 'JavaScript', 'Script', 'Scripting'],
         correctAnswer: 'Script'
-    },	
-	{
+    },
+    {
         question: 'What does CSS stand for?',
         options: ['Casing Style Sheet', 'Collating Style Sheet', 'Cascading Style Sheet', 'Cascade Style Sheet'],
         correctAnswer: 'Cascading Style Sheet'
-    },	
-	{
+    },
+    {
         question: 'A general single line that appears between the curly braces, whether shorthand or longhand in CSS is known as?',
         options: ['Declaration', 'Tweening', 'Selector', 'Declaration Block'],
         correctAnswer: 'Declaration'
-    },	
-	{
+    },
+    {
         question: 'Where in an HTML document is the correct place to refer to an external style sheet?',
         options: ['In the <body> section', 'In the <head> section', 'At the end of the document', 'At the top of the document'],
         correctAnswer: 'In the <head> section'
@@ -170,14 +168,14 @@ function checkAnswer(selectedIndex) {
         correctAnswers++;
     }
 
-    const feedbackMessage = currentQuestion.correctAnswer === currentQuestion.options[selectedIndex]
-        ? 'Correct!'
-        : 'Incorrect!';
+    const feedbackMessage = currentQuestion.correctAnswer === currentQuestion.options[selectedIndex] ?
+        'Correct!' :
+        'Incorrect!';
 
     $('#feedback').text(feedbackMessage);
 
     // Add a delay before moving to the next question
-    setTimeout(function () {
+    setTimeout(function() {
         $('#feedback').text('');
         nextQuestion();
     }, 500); // Adjust the delay as needed
@@ -191,7 +189,7 @@ function nextQuestion() {
         displayQuestion();
     } else {
         quizCompleted = true;
-        setTimeout(function () {
+        setTimeout(function() {
             showMessage('Quiz completed!', 'success');
             showHighScores();
         }, 500); // Add a delay of 500 milliseconds (adjust if needed)
@@ -230,7 +228,10 @@ function submitScore() {
     const initials = $('#initials').val().toUpperCase();
 
     if (initials && correctAnswers > 0) {
-        const score = { initials, score: correctAnswers };
+        const score = {
+            initials,
+            score: correctAnswers
+        };
         console.log('Score to be stored:', score); // Add this line for debugging
 
         // Store score in localStorage
